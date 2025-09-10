@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/AlexandreMaycon/node-devops#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "vercel": "^47.0.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
