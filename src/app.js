@@ -2,8 +2,8 @@ import express from 'express';
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get('/health-check', (req, res) => {
+  res.send('OK, the server is running!');
 });
 
 app.listen(3000, () => {
