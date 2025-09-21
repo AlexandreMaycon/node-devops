@@ -7,14 +7,24 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs}"],
     plugins: { js },
     extends: ["js/recommended"],
-    languageOptions: { globals: globals.browser }
+    languageOptions: {
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
+    }
   },
   {
-    // reconhece os globals do Jest nos testes
     files: ["tests/**/*.js", "**/*.test.js"],
-    env: { jest: true },
+    plugins: { js },
+    extends: ["js/recommended"],
     languageOptions: {
-      globals: { ...globals.jest }
+      sourceType: "module",
+      globals: {
+        ...globals.jest,
+        ...globals.node
+      }
     }
   }
 ]);
