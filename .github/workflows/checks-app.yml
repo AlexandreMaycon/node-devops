@@ -23,6 +23,9 @@ jobs:
       - name: Lint project
         run: npm run lint
 
+      - name: Run tests
+        run: npm test
+
   codeql:
     name: Analyze with CodeQL
     runs-on: ubuntu-latest
